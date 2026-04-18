@@ -125,14 +125,14 @@ nav a:hover {
     font-weight: bold;
     margin-top: 20px;
 }
-
+<p>
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: -50px; /* Die Cards rücken leicht ins Bild rein (moderner Look) */
 }
-
+</p>
 .card {
     background: rgba(22, 22, 22, 0.9);
     backdrop-filter: blur(15px); /* Glas-Effekt */
