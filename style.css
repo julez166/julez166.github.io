@@ -159,3 +159,35 @@ nav a:hover {
     width: 100%;
     margin-top: 20px;
 }
+
+footer {
+    background-color: #050505;
+    padding: 40px 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--text-main);
+    font-size: 1.5rem; /* Größer als in der Nav */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px); /* Kleiner Sprung-Effekt nach oben */
+}
