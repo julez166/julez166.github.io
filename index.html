@@ -7,45 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav>
+    <div class="logo">JULEZ166</div>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+    </ul>
+</nav>
 
-    <header>
-        <nav>
-            <div class="logo">JULEZ166</div>
-            <ul>
-                <li><a href="#mix-master">Mix & Master</a></li>
-                <li><a href="#music">Meine Musik</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <h1>Sound Design & Musik von Julez166</h1>
-            <p>Dein Track verdient High-End Qualität.</p>
-        </section>
-
-        <section id="mix-master">
-            <h2>Mix & Mastering Services</h2>
-            <p>Ich bringe deine Vocals nach vorne und sorge für den nötigen Druck im Master.</p>
-            <button>Anfrage senden</button>
-        </section>
-
-      <section id="music">
-    <h2>Julez166 - Artist</h2>
-    <div class="music-container">
-        <div style="border: 1px dashed #555; padding: 20px; margin-bottom: 20px;">
-            <p>[Hier kommt dein Top-Track von Spotify/Soundcloud rein]</p>
-        </div>
-        
-        <h3>Meine Reviews</h3>
-        <p>Hier schreibe ich bald über meine eigenen Releases und den Entstehungsprozess.</p>
-        <ul style="list-style: none; padding: 0;">
-            <li><a href="#">Release Review #1 (Coming Soon)</a></li>
-        </ul>
-    </div>
+<section class="hero">
+    <h1>Julez166</h1>
+    <p style="color: #a0a0a0;">Artist | Mix & Master Engineer</p>
 </section>
-    </main>
 
+<div class="container">
+    <div class="grid" id="services">
+        <div class="card">
+            <h3>Mix & Mastering</h3>
+            <p>Professioneller Sound für deine Tracks. Ich sorge für Druck, Klarheit und die richtige Tiefe.</p>
+            <a href="mailto:deine-email@beispiel.de" class="btn">Anfrage starten</a>
+        </div>
+
+        <div class="card" id="music">
+            <h3>My Music</h3>
+            <p>Check meine neuesten Releases und meinen Vibe als Artist.</p>
+            <a href="#" style="color: var(--accent); text-decoration: none;">Bald auf Spotify →</a>
+        </div>
+    </div>
+    
+    <div class="grid" id="reviews">
+        <div class="card">
+            <h3>Latest Reviews</h3>
+            <p>Ein tiefer Einblick in meine Musik-Produktionen und Reviews meiner Tracks.</p>
+            <span style="color: #555;">Noch keine Reviews vorhanden.</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
