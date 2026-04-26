@@ -35,7 +35,11 @@
                 <input type="email" name="email" placeholder="deine@mail.de" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;">
             </div>
             <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--accent); margin-bottom: 5px;">Deine Nachricht (Mix/Master/Feature?)</label>
+                <label style="display: block; color: var(--accent); margin-bottom: 5px;">Gewünschter Service</label>
+                <input type="text" name="service" id="serviceField" placeholder="z.B. Mix & Master" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--accent); margin-bottom: 5px;">Deine Nachricht</label>
                 <textarea name="message" rows="5" placeholder="Erzähl mir von deinem Projekt..." required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;"></textarea>
             </div>
             <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Nachricht senden</button>
@@ -51,5 +55,13 @@
         </div>
     </div>
 </footer>
+<script>
+    // Automatisch Service aus URL-Parameter eintragen
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service');
+    if (service) {
+        document.getElementById('serviceField').value = service;
+    }
+</script>
 </body>
 </html>
