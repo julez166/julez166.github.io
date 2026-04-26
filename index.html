@@ -1,124 +1,124 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>julez166 | Artist, Mix & Master</title>
+
     
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        .spotify-placeholder {
-            width: 100%;
-            max-width: 600px; /* Damit es im Grid nicht zu breit wird */
-            height: 352px;
-            background: #191414; /* Spotify Schwarz */
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #1DB954;
-            margin: 20px auto;
-            font-family: sans-serif;
-        }
-        .spotify-placeholder p {
-            margin: 10px 0;
-            font-size: 0.9rem;
-            color: #b3b3b3;
-        }
-        .spotify-btn {
-            background: #1DB954;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 500px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .spotify-btn:hover {
-            transform: scale(1.05);
-            background: #1ed760;
-        }
-    </style>
 </head>
+
 <body>
+
 <nav>
+
     <a href="index.html" style="text-decoration: none;">
+
         <div class="logo">julez166</div>
+
     </a>
+
    <ul>
+
         <li><a href="Musik.html">Musik</a></li>
+
         <li><a href="services.html">Services</a></li>
+
         <li><a href="kontakt.html">Kontakt</a></li>
+
         <li><a href="ueber-mich.html">Über mich</a></li>
+
     </ul>
+
 </nav>
+
 <section class="hero">
+
     <h1>julez166</h1>
+
     <p>Artist | Mix & Master Engineer</p>
+
 </section>
+
 <div class="container">
+
     <div class="grid" id="services">
+
         <div class="card">
+
             <h3>Mix & Mastering</h3>
+
             <p>Professioneller Sound für deine Tracks. Als Artist weiß ich: Ein guter Mix entscheidet, ob der Vibe rüberkommt oder nicht. Ich sorge für die nötige Tiefe und ein Master, das zum Industrie Standard wird. Kein Standard-Preset-Müll, sondern individuelles Fine-Tuning für deinen Style.</p>
-            <a href="mailto:info@julez166.de" class="btn">Jetzt Projekt besprechen</a>
+
+            <a href="mailto:deine-email@beispiel.de" class="btn">Jetzt Projekt besprechen</a>
+
         </div>
-        
+
         <div class="card" id="Musik">
+
             <h3>Meine Musik</h3>
-            <div id="spotify-container">
-                <div class="spotify-placeholder">
-                    <i class="fa-brands fa-spotify" style="font-size: 3rem; color: #1DB954; margin-bottom: 15px;"></i>
-                    <p>Hier kannst du meine Referenzen hören.<br>Dazu muss der Spotify-Player geladen werden.</p>
-                    <button class="spotify-btn" onclick="loadSpotify()">Player laden</button>
-                    <p style="font-size: 0.7rem;">Mit dem Laden akzeptierst du die <a href="datenschutz.html" style="color: #1DB954;">Datenschutzerklärung</a>.</p>
-                </div>
-            </div>
-            <a href="Musik.html" class="btn" style="margin-top: 20px;">Zur Musik-Seite →</a>
+
+            <p>Check meine neuesten Releases und meinen Vibe als Artist. Damit du genau weißt, auf was du dich einlässt und direkt erste Einblicke in meine Arbeit hast</p>
+
+            <a href="Musik.html" class="btn">Zur Musik →</a>
+
         </div>
+
     </div>
+
     
+
     <div style="text-align: center; margin-top: 40px; padding-bottom: 60px;">
+
         <h3 style="color: var(--text-dim); margin-bottom: 20px;">Bereit für den nächsten Schritt?</h3>
+
         <a href="kontakt.html" class="btn" style="padding: 15px 40px; font-size: 1.1rem;">
+
             <i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> Projekt jetzt anfragen
+
         </a>
+
     </div>
+
 </div>
 
 <footer>
+
     <div class="footer-content">
+
         <p>&copy; 2026 julez166. All rights reserved.</p>
+
         <div class="social-links">
+
             <a href="https://www.instagram.com/julez.166" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
             <a href="https://www.tiktok.com/@julez.166" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+
         </div>
+
         <div style="margin-top: 10px; font-size: 0.8rem;">
+
             <a href="impressum.html" style="color: var(--text-dim); margin-right: 16px;">Impressum</a>
+
             <a href="datenschutz.html" style="color: var(--text-dim);">Datenschutz</a>
+
         </div>
+
     </div>
+
 </footer>
 
-<script>
-function loadSpotify() {
-    // ERSETZE DEN LINK UNTEN DURCH DEINEN EIGENEN SPOTIFY EMBED LINK
-    // (Diesen findest du bei Spotify unter 'Teilen' -> 'Embed' -> src="..." )
-    var spotifyLink = "https://open.spotify.com/embed/artist/DEINE_ID?utm_source=generator";
-    
-    var container = document.getElementById('spotify-container');
-    container.innerHTML = '<iframe style="border-radius:12px" src="' + spotifyLink + '" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
-}
-</script>
-
 </body>
+
 </html>
+
