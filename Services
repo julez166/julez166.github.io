@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>julez166 | Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: #0e0e0e;
+            border: 1px solid #1e1e1e;
+            border-radius: 16px;
+            padding: 36px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .service-card.featured {
+            border-color: var(--accent);
+        }
+
+        .service-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .service-icon {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .service-card .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .service-card .price span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-dim);
+        }
+
+        .service-card p {
+            color: var(--text-dim);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .service-features li {
+            color: var(--text-dim);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-features li i {
+            color: var(--accent);
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .service-divider {
+            border: none;
+            border-top: 1px solid #1e1e1e;
+            margin: 4px 0;
+        }
+
+        .service-card .btn {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .free-badge {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            margin-top: -4px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" style="text-decoration: none;">
+        <div class="logo">julez166</div>
+    </a>
+    <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Musik.html">Musik</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<header class="hero-small">
+    <h2>Services</h2>
+    <p>Was kann ich für deinen Sound tun?</p>
+</header>
+
+<div class="services-grid">
+
+    <!-- Feature -->
+    <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+        <h3>Feature</h3>
+        <div class="price">Kostenlos <span class="free-badge">gratis</span></div>
+        <hr class="service-divider">
+        <p>Du willst mich auf deinem Track? Schreib mir einfach — wenn der Vibe stimmt, bin ich dabei.</p>
+        <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Vocals / Rap / Hook</li>
+            <li><i class="fa-solid fa-check"></i> Kein fixer Ablauf — alles flexibel</li>
+            <li><i class="fa-solid fa-check"></i> Auf Anfrage</li>
+        </ul>
+        <a href="kontakt.html" class="btn">Feature anfragen</a>
+    </div>
+
+    <!-- Mix -->
+    <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-sliders"></i></div>
+        <h3>Mix</h3>
+        <div class="price">ab 20 € <span>/ Track</span></div>
+        <hr class="service-divider">
+        <p>Ich bringe deinen Track in Balance — Tiefe, Breite, Punch. Alles individuell auf deinen Style abgestimmt.</p>
+        <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Stem-basiertes Mixing</li>
+            <li><i class="fa-solid fa-check"></i> Bis zu 2 Revisionen</li>
+            <li><i class="fa-solid fa-check"></i> WAV-Lieferung</li>
+            <li><i class="fa-solid fa-check"></i> Preis auf Anfrage</li>
+        </ul>
+        <a href="kontakt.html" class="btn">Mix anfragen</a>
+    </div>
+
+    <!-- Master -->
+    <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-wave-square"></i></div>
+        <h3>Master</h3>
+        <div class="price">ab 10 € <span>/ Track</span></div>
+        <hr class="service-divider">
+        <p>Industrie-Standard-Lautstärke, Klarheit und Konsistenz — bereit für Spotify, Apple Music & Co.</p>
+        <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Streaming-optimiert</li>
+            <li><i class="fa-solid fa-check"></i> LUFS-konform</li>
+            <li><i class="fa-solid fa-check"></i> WAV + MP3 Lieferung</li>
+            <li><i class="fa-solid fa-check"></i> Preis auf Anfrage</li>
+        </ul>
+        <a href="kontakt.html" class="btn">Master anfragen</a>
+    </div>
+
+    <!-- Mix & Master -->
+    <div class="service-card featured">
+        <div class="service-badge">⚡ Empfohlen</div>
+        <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+        <h3>Mix & Master</h3>
+        <div class="price">ab 30 € <span>/ Track</span></div>
+        <hr class="service-divider">
+        <p>Das komplette Paket — von rohen Stems zum fertigen, releasefähigen Track. Kein Preset-Müll, sondern dein Sound.</p>
+        <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Komplettes Mixing</li>
+            <li><i class="fa-solid fa-check"></i> Professionelles Mastering</li>
+            <li><i class="fa-solid fa-check"></i> Bis zu 3 Revisionen</li>
+            <li><i class="fa-solid fa-check"></i> WAV + MP3 Lieferung</li>
+            <li><i class="fa-solid fa-check"></i> Preis auf Anfrage</li>
+        </ul>
+        <a href="kontakt.html" class="btn">Paket anfragen</a>
+    </div>
+
+</div>
+
+<div style="text-align: center; padding-bottom: 60px; color: var(--text-dim); font-size: 0.9rem;">
+    <i class="fa-solid fa-circle-info" style="color: var(--accent); margin-right: 6px;"></i>
+    Alle Preise sind Richtwerte — der finale Preis wird individuell abgestimmt.
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 julez166. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/julez.166" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@julez.166" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
