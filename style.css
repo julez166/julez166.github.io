@@ -207,9 +207,10 @@ footer {
 }
 
 .social-links a:hover {
-    color: #ffffff;
-    transform: translateY(-5px) scale(1.1);
-    filter: drop-shadow(0 0 10px var(--accent));
+    color: var(--accent);
+    transform: translateY(-4px) scale(1.1);
+    filter: drop-shadow(0 0 12px var(--accent));
+    text-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent);
 }
 
 /* Impressum & Datenschutz Styling */
