@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>julez166 | Über mich</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-photo-wrapper {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: #111;
+            border-radius: 16px;
+            border: 1px solid #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-size: 0.85rem;
+            gap: 12px;
+        }
+
+        .about-photo i {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .about-photo-accent {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            width: 60px;
+            height: 60px;
+            border-top: 2px solid var(--accent);
+            border-left: 2px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        .about-photo-accent-br {
+            position: absolute;
+            bottom: -6px;
+            right: -6px;
+            width: 60px;
+            height: 60px;
+            border-bottom: 2px solid var(--accent);
+            border-right: 2px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .about-text .subtitle {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .about-text p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+
+        .about-text p strong {
+            color: var(--text);
+        }
+
+        .about-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+            margin: 28px 0;
+        }
+
+        .about-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .about-tag {
+            background: #111;
+            border: 1px solid #2a2a2a;
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 680px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-photo {
+                aspect-ratio: 4/3;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index.html" style="text-decoration: none;">
+        <img src="logo.png" alt="julez166" class="logo-img">
+    </a>
+    <ul>
+        <li><a href="Musik.html">Musik</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+    </ul>
+</nav>
+
+<header class="hero-small">
+    <h2>Über mich</h2>
+    <p>Wer steckt hinter julez166?</p>
+</header>
+
+<div class="about-section">
+    <div class="about-grid">
+
+        <div class="about-photo-wrapper">
+            <img src="DEIN-FOTO.jpg" alt="julez166" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:16px; border:1px solid #222;">
+            <div class="about-photo-accent"></div>
+            <div class="about-photo-accent-br"></div>
+        </div>
+
+        <div class="about-text">
+            <h2>julez166</h2>
+            <p class="subtitle">Artist · Mix & Master Engineer</p>
+
+            <p>
+                Musik ist für mich mehr als nur Sound — <strong>es ist Selbstausdruck, Handwerk und Leidenschaft in einem.</strong>
+                Ich mache Musik, weil ich gar nicht anders kann. Weil es der einzige Weg ist, Dinge zu sagen, die sich in Worte allein nicht fassen lassen.
+            </p>
+
+            <div class="about-divider"></div>
+
+            <p>
+                Als Artist kenne ich beide Seiten des Studios: <strong>die kreative und die technische.</strong>
+                Ich weiß, wie es sich anfühlt, wenn ein Track noch nicht das widerspiegelt, was man im Kopf hat — und ich weiß, wie man das ändert.
+                Genau das bringe ich in jedes Projekt mit ein.
+            </p>
+
+            <p>
+                Meine Services sind deshalb kein Standard-Angebot.
+                <strong>Ich arbeite mit dir, nicht nur für dich.</strong>
+                Ziel ist immer dasselbe: dein Sound soll klingen, wie du klingst — nur auf dem nächsten Level.
+            </p>
+
+            <div class="about-tags">
+                <span class="about-tag">Music Production</span>
+                <span class="about-tag">Mix & Mastering</span>
+                <span class="about-tag">Independent Artist</span>
+            </div>
+
+            <a href="kontakt.html" class="btn" style="margin-top: 32px; display: inline-block;">
+                <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Projekt anfragen
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 julez166. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/julez.166" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@julez.166" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="impressum.html" class="footer-link">Impressum</a>
+            <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+            <a href="agb.html" class="footer-link">AGB</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
