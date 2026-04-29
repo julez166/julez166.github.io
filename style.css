@@ -50,6 +50,17 @@ nav {
     transform: scale(1.05);
 }
 
+.logo-img {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -240,6 +251,10 @@ footer {
 
     .logo {
         font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 45px;
     }
 
     .grid {
