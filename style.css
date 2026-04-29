@@ -260,4 +260,11 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
+
+    /* Fix: background-attachment: fixed funktioniert auf Mobile nicht */
+    .hero {
+        background-attachment: scroll;
+        background-position: center center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    }
 }
