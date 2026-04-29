@@ -29,12 +29,12 @@
         <div class="card">
             <h3>Mix & Mastering</h3>
             <p>Professioneller Sound für deine Tracks. Als Artist weiß ich: Ein guter Mix entscheidet, ob der Vibe rüberkommt oder nicht. Ich sorge für die nötige Tiefe und ein Master, das zum Industrie-Standard wird. Kein Standard-Preset-Müll, sondern individuelles Fine-Tuning für deinen Style.</p>
-            <a href="kontakt/" class="btn">Jetzt Projekt besprechen</a>
+            <a href="kontakt/" class="btn" style="display: block; text-align: center;">Jetzt Projekt besprechen</a>
         </div>
         <div class="card" id="Musik">
             <h3>Meine Musik</h3>
             <p>Erhalte einen Einblick in meinen Sound – direkt über meine neuesten Releases. So bekommst du direkt einen Eindruck davon, wie ich arbeite.</p>
-            <a href="musik/" class="btn">Zur Musik </a>
+            <a href="musik/" class="btn" style="display: block; text-align: center;">Zur Musik →</a>
         </div>
     </div>
     
@@ -59,13 +59,10 @@
         </div>
     </div>
 </footer>
-
 <script>
     const currentPath = window.location.pathname.toLowerCase();
-
     document.querySelectorAll("nav ul li a").forEach(link => {
         const href = link.getAttribute("href").toLowerCase();
-
         if (
             (currentPath.includes("/musik/") && href.includes("musik")) ||
             (currentPath.includes("/services/") && href.includes("services")) ||
