@@ -27,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: 130px;
+    height: 80px;
     padding: 0 10% 10px;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(10px);
@@ -50,6 +50,7 @@ nav {
     width: auto;
     display: block;
     margin-top: 20px;
+    margin-bottom: 10p;
     transition: 0.3s;
 }
 
