@@ -26,9 +26,9 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 110px;
-    padding: 0 10%;
+    align-items: flex-end;
+    height: 130px;
+    padding: 0 10% 10px;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(10px);
     position: sticky;
@@ -49,6 +49,7 @@ nav {
     height: 100px;
     width: auto;
     display: block;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
@@ -226,8 +227,9 @@ footer {
 /* 7. RESPONSIVE */
 @media (max-width: 768px) {
     nav {
-        padding: 0 20px;
-        height: 70px;
+        padding: 0 20px 8px;
+        height: 80px;
+        align-items: flex-end;
     }
 
     nav ul {
@@ -240,6 +242,7 @@ footer {
 
     .logo-img {
         height: 54px;
+        margin-top: 10px;
     }
 
     .grid {
