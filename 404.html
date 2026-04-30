@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>julez166 | 404 – Nicht gefunden</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .error-section {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-number {
+            font-size: clamp(6rem, 20vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px #222;
+            letter-spacing: -0.02em;
+            position: relative;
+            user-select: none;
+            animation: flicker 4s infinite;
+        }
+
+        .error-number span {
+            color: var(--accent);
+            -webkit-text-stroke: 0;
+            animation: glitch 3s infinite;
+            display: inline-block;
+        }
+
+        @keyframes flicker {
+            0%, 95%, 100% { opacity: 1; }
+            96% { opacity: 0.4; }
+            97% { opacity: 1; }
+            98% { opacity: 0.2; }
+            99% { opacity: 1; }
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            91% { transform: translate(-3px, 1px); }
+            92% { transform: translate(3px, -1px); }
+            93% { transform: translate(-2px, 2px); }
+            94% { transform: translate(2px, -2px); }
+            95% { transform: translate(0); }
+        }
+
+        .error-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            animation: fadeUp 0.6s ease both;
+            animation-delay: 0.1s;
+        }
+
+        .error-title {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #fff;
+            margin: 16px 0 12px;
+            animation: fadeUp 0.6s ease both;
+            animation-delay: 0.2s;
+        }
+
+        .error-subtitle {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            max-width: 380px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            animation: fadeUp 0.6s ease both;
+            animation-delay: 0.3s;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeUp 0.6s ease both;
+            animation-delay: 0.4s;
+        }
+
+        .error-actions .btn {
+            padding: 13px 28px;
+        }
+
+        .btn-ghost {
+            padding: 13px 28px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Scan line effect */
+        .error-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+            pointer-events: none;
+        }
+
+        /* Accent glow behind 404 */
+        .error-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 255, 200, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" style="text-decoration: none;">
+        <img src="logo.png" alt="julez166" class="logo-img">
+    </a>
+    <ul>
+        <li><a href="musik/">Musik</a></li>
+        <li><a href="services/">Services</a></li>
+        <li><a href="kontakt/">Kontakt</a></li>
+        <li><a href="ueber-mich/">Über mich</a></li>
+    </ul>
+</nav>
+
+<section class="error-section">
+    <div class="error-glow"></div>
+    <p class="error-label">Fehler</p>
+    <div class="error-number">4<span>0</span>4</div>
+    <h1 class="error-title">Diese Seite existiert nicht.</h1>
+    <p class="error-subtitle">Die URL, die du aufgerufen hast, gibt es nicht — oder sie wurde verschoben.</p>
+    <div class="error-actions">
+        <a href="/" class="btn">
+            <i class="fa-solid fa-house" style="margin-right: 8px;"></i> Zurück zur Startseite
+        </a>
+        <a href="kontakt/" class="btn-ghost">
+            <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Kontakt
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 julez166. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/julez.166" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@julez.166" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://discord.gg/QxgVmdKx9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+        </div>
+        <div class="footer-legal">
+            <a href="impressum/" class="footer-link">Impressum</a>
+            <a href="datenschutz/" class="footer-link">Datenschutz</a>
+            <a href="agb/" class="footer-link">AGB</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
