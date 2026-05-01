@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>julez166 | Kontakt</title>
-
+    <!-- Open Graph -->
+    <meta property="og:title" content="julez166 | Kontakt">
+    <meta property="og:description" content="Projekt anfragen, Feature anfragen oder einfach melden — ich freu mich auf deine Nachricht.">
+    <meta property="og:image" content="https://julez166.de/og-image.png">
+    <meta property="og:url" content="https://julez166.de/kontakt/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="julez166 | Kontakt">
+    <meta name="twitter:description" content="Projekt anfragen, Feature anfragen oder einfach melden — ich freu mich auf deine Nachricht.">
+    <meta name="twitter:image" content="https://julez166.de/og-image.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -31,30 +42,23 @@
     <div class="card" style="max-width: 600px; margin: 0 auto;">
         <form action="https://formspree.io/f/mkokevgd" method="POST">
             <input type="hidden" name="_next" value="https://julez166.de/kontakt/">
-
             <div style="margin-bottom: 20px;">
                 <label style="display: block; color: var(--accent); margin-bottom: 5px;">Name</label>
                 <input type="text" name="name" placeholder="Dein Name" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;">
             </div>
-
             <div style="margin-bottom: 20px;">
                 <label style="display: block; color: var(--accent); margin-bottom: 5px;">E-Mail</label>
                 <input type="email" name="email" placeholder="deine@mail.de" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;">
             </div>
-
             <div style="margin-bottom: 20px;">
                 <label style="display: block; color: var(--accent); margin-bottom: 5px;">Gewünschter Service</label>
                 <input type="text" name="service" id="serviceField" placeholder="z.B. Mix & Master" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px;">
             </div>
-
             <div style="margin-bottom: 20px;">
                 <label style="display: block; color: var(--accent); margin-bottom: 5px;">Deine Nachricht</label>
                 <textarea name="message" placeholder="Erzähl mir von deinem Projekt..." required oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 8px; min-height: 120px; resize: none; overflow: hidden;"></textarea>
             </div>
-
-            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">
-                Nachricht senden
-            </button>
+            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Nachricht senden</button>
         </form>
     </div>
 </div>
@@ -62,19 +66,11 @@
 <footer>
     <div class="footer-content">
         <p>&copy; 2026 julez166. All rights reserved.</p>
-
         <div class="social-links">
-            <a href="https://www.instagram.com/julez.166" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@julez.166" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://discord.gg/QxgVmdKx9" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-discord"></i>
-            </a>
+            <a href="https://www.instagram.com/julez.166" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@julez.166" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://discord.gg/QxgVmdKx9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
         </div>
-
         <div class="footer-legal">
             <a href="../impressum/" class="footer-link">Impressum</a>
             <a href="../datenschutz/" class="footer-link">Datenschutz</a>
@@ -84,29 +80,16 @@
 </footer>
 
 <script>
-    // Service automatisch einfügen (vom Warenkorb)
     const params = new URLSearchParams(window.location.search);
     const service = params.get('service');
-    if (service) {
-        document.getElementById('serviceField').value = service;
-    }
-
-    // Active Navigation
+    if (service) document.getElementById('serviceField').value = service;
     const currentPath = window.location.pathname.toLowerCase();
-
     document.querySelectorAll("nav ul li a").forEach(link => {
         const href = link.getAttribute("href").toLowerCase();
-
-        if (
-            (currentPath.includes("/musik/") && href.includes("musik")) ||
-            (currentPath.includes("/services/") && href.includes("services")) ||
-            (currentPath.includes("/kontakt/") && href.includes("kontakt")) ||
-            (currentPath.includes("/ueber-mich/") && href.includes("ueber-mich"))
-        ) {
+        if ((currentPath.includes("/musik/") && href.includes("musik")) || (currentPath.includes("/services/") && href.includes("services")) || (currentPath.includes("/kontakt/") && href.includes("kontakt")) || (currentPath.includes("/ueber-mich/") && href.includes("ueber-mich"))) {
             link.classList.add("active");
         }
     });
 </script>
-
 </body>
 </html>
