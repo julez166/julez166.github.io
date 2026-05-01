@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>julez166 | Services</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="julez166 | Services">
+    <meta property="og:description" content="Professionelles Mixing & Mastering ab 20 €. Wähl deinen Service — individuell abgestimmt auf deinen Sound.">
+    <meta property="og:image" content="https://julez166.de/og-image.png">
+    <meta property="og:url" content="https://julez166.de/services/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="julez166 | Services">
+    <meta name="twitter:description" content="Professionelles Mixing & Mastering ab 20 €. Wähl deinen Service — individuell abgestimmt auf deinen Sound.">
+    <meta name="twitter:image" content="https://julez166.de/og-image.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <style>
@@ -125,7 +137,6 @@
             background: var(--accent);
             color: #000;
         }
-        /* Cart */
         .cart-bar {
             position: fixed;
             bottom: 0;
@@ -293,7 +304,6 @@
             <i class="fa-solid fa-cart-plus"></i> Anfragen
         </button>
     </div>
-
     <div class="service-card" id="card-mix">
         <div class="service-icon"><i class="fa-solid fa-sliders"></i></div>
         <h3>Mix</h3>
@@ -310,7 +320,6 @@
             <i class="fa-solid fa-cart-plus"></i> In den Warenkorb
         </button>
     </div>
-
     <div class="service-card" id="card-master">
         <div class="service-icon"><i class="fa-solid fa-wave-square"></i></div>
         <h3>Master</h3>
@@ -327,7 +336,6 @@
             <i class="fa-solid fa-cart-plus"></i> In den Warenkorb
         </button>
     </div>
-
     <div class="service-card featured" id="card-mixmaster">
         <div class="service-badge">⚡ Empfohlen</div>
         <div class="service-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
@@ -352,7 +360,6 @@
     <i class="fa-solid fa-circle-info"></i> Alle Preise sind Richtwerte — der finale Preis wird individuell abgestimmt.
 </p>
 
-<!-- Cart Bar -->
 <div class="cart-bar" id="cartBar">
     <div class="cart-bar-left">
         <span class="cart-bar-label">Deine Auswahl:</span>
@@ -384,14 +391,11 @@
 
 <script>
     const cart = {};
-
     function toggleCart(id, label, price, btn) {
         if (cart[id]) {
             delete cart[id];
             btn.classList.remove('in-cart');
-            btn.innerHTML = id === 'feature'
-                ? '<i class="fa-solid fa-cart-plus"></i> Anfragen'
-                : '<i class="fa-solid fa-cart-plus"></i> In den Warenkorb';
+            btn.innerHTML = id === 'feature' ? '<i class="fa-solid fa-cart-plus"></i> Anfragen' : '<i class="fa-solid fa-cart-plus"></i> In den Warenkorb';
         } else {
             cart[id] = { label, price };
             btn.classList.add('in-cart');
@@ -399,61 +403,35 @@
         }
         updateCartBar();
     }
-
     function removeFromCart(id) {
         if (!cart[id]) return;
         delete cart[id];
         const btn = document.querySelector(`#card-${id} .add-to-cart-btn`);
         if (btn) {
             btn.classList.remove('in-cart');
-            btn.innerHTML = id === 'feature'
-                ? '<i class="fa-solid fa-cart-plus"></i> Anfragen'
-                : '<i class="fa-solid fa-cart-plus"></i> In den Warenkorb';
+            btn.innerHTML = id === 'feature' ? '<i class="fa-solid fa-cart-plus"></i> Anfragen' : '<i class="fa-solid fa-cart-plus"></i> In den Warenkorb';
         }
         updateCartBar();
     }
-
     function updateCartBar() {
         const bar = document.getElementById('cartBar');
         const list = document.getElementById('cartItemsList');
         const total = document.getElementById('cartTotal');
         const items = Object.entries(cart);
-
-        if (items.length === 0) {
-            bar.classList.remove('visible');
-            return;
-        }
-
+        if (items.length === 0) { bar.classList.remove('visible'); return; }
         bar.classList.add('visible');
-
-        list.innerHTML = items.map(([id, { label }]) =>
-            `<span class="cart-chip">
-                ${label}
-                <span class="cart-chip-remove" onclick="removeFromCart('${id}')">
-                    <i class="fa-solid fa-xmark"></i>
-                </span>
-            </span>`
-        ).join('');
-
+        list.innerHTML = items.map(([id, { label }]) => `<span class="cart-chip">${label}<span class="cart-chip-remove" onclick="removeFromCart('${id}')"><i class="fa-solid fa-xmark"></i></span></span>`).join('');
         const sum = items.reduce((acc, [, { price }]) => acc + price, 0);
         total.textContent = sum > 0 ? `ab ${sum} €` : 'Kostenlos';
     }
-
     function goToKontakt() {
         const items = Object.values(cart).map(i => i.label).join(', ');
-        const url = `../kontakt/?service=${encodeURIComponent(items)}`;
-        window.location.href = url;
+        window.location.href = `../kontakt/?service=${encodeURIComponent(items)}`;
     }
-
     const currentPath = window.location.pathname.toLowerCase();
     document.querySelectorAll("nav ul li a").forEach(link => {
         const href = link.getAttribute("href").toLowerCase();
-        if (
-            (currentPath.includes("/musik/") && href.includes("musik")) ||
-            (currentPath.includes("/services/") && href.includes("services")) ||
-            (currentPath.includes("/kontakt/") && href.includes("kontakt")) ||
-            (currentPath.includes("/ueber-mich/") && href.includes("ueber-mich"))
-        ) {
+        if ((currentPath.includes("/musik/") && href.includes("musik")) || (currentPath.includes("/services/") && href.includes("services")) || (currentPath.includes("/kontakt/") && href.includes("kontakt")) || (currentPath.includes("/ueber-mich/") && href.includes("ueber-mich"))) {
             link.classList.add("active");
         }
     });
